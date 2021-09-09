@@ -4,9 +4,8 @@ import { ExclamationCircleOutlined } from '@ant-design/icons';
 
 const { confirm } = Modal;
 
-export default class Card extends React.Component {
-  showConfirm = () => {
-    const ths = this;
+export const Card  = ({ data, remove }) => {
+  const showConfirm = () => {
     confirm({
       icon: <ExclamationCircleOutlined />,
       title: 'Вы хотите удалить этот элемент?',
@@ -14,20 +13,18 @@ export default class Card extends React.Component {
       cancelText: 'Нет',
       okText: 'Да',
       onOk() {
-        ths.props.delete(ths.props.data.id);
+        remove(data.id);
       }
     });
   }
 
-  render() {
-    return (
-      <div className={'card'}>
-        <h2 className={'card__title'}>{this.props.data.title}</h2>
-        <p className={'card__text'}>{this.props.data.text}</p>
-          <div className={'card__delete-button'}
-               onClick={() => this.showConfirm()}>
-          </div>
-      </div>
-    );
-  }
+  return (
+    <div className={'card'}>
+      <h2 className={'card__title'}>{data.title}</h2>
+      <p className={'card__text'}>{data.text}</p>
+        <div className={'card__delete-button'}
+             onClick={() => showConfirm()}>
+        </div>
+    </div>
+  );
 }

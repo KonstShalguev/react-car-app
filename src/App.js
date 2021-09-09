@@ -1,7 +1,7 @@
 import 'antd/dist/antd.css';
 
 import React from 'react';
-import Card from './components/card/card';
+import { Card } from './components/card/card';
 import database from "./services/firebase";
 import { Input } from 'antd';
 import './components/card/card.css';
@@ -65,7 +65,7 @@ export default class App extends React.Component {
               return (
                 <Card data={item}
                       key={item.id}
-                      delete={this.deleteCard}
+                      remove={this.deleteCard}
                 />
               )
             })
