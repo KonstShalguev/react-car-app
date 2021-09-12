@@ -2,11 +2,11 @@
 	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 	position: relative;
 	box-sizing: border-box;
-	width: 250px;
+	width: 100%;
 	border: 1px solid #dadada;
 	border-radius: 4px;
 	padding: 16px;
-	margin:  0  0 32px;
+	margin: 0 0 32px;
 }
 
 .card__title {
@@ -29,4 +29,10 @@
 	border: 1px solid #f02c29;
 	border-radius: 100%;
 	cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+	.card {
+		width: 47%;
+	}
 }
