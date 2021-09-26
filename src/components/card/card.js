@@ -1,3 +1,5 @@
+import './card.scss';
+
 import React from "react";
 import { Modal } from 'antd';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
@@ -20,11 +22,12 @@ export const Card  = ({ data, remove }) => {
 
   return (
     <div className={'card'}>
-      <h2 className={'card__title'}>{data.title}</h2>
-      <p className={'card__text'}>{data.text}</p>
-        <div className={'card__delete-button'}
-             onClick={() => showConfirm()}>
-        </div>
+      <h2 className={'card__title'}>{data.brand}</h2>
+      <p className={'card__text'}>Модель: <span>{data.model}</span></p>
+      <p className={'card__text'}>Цвет: <span>{data.color}</span></p>
+      <div className={'card__delete-button'}
+           onClick={() => showConfirm()}>
+      </div>
     </div>
   );
 }

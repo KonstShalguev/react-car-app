@@ -1,3 +1,5 @@
+import './not-found.scss';
+
 import React from "react";
 
 export const NotFound = ({ render }) => {

@@ -1,0 +1,40 @@
+.card {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  padding: 16px;
+  margin: 0 0 32px;
+
+  &__title {
+    margin: 0 0 16px;
+    color: #78858b;
+  }
+
+  &__text {
+    color: #78858b;
+
+    span {
+      color: #0a0a0a;
+      font-weight: 500;
+    }
+  }
+
+  &__delete-button {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background-color: #f35d5b;
+    border: 1px solid #f02c29;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 47%;
+  }
+}

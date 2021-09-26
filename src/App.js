@@ -1,6 +1,4 @@
 import 'antd/dist/antd.css';
-import './components/card/card.css';
-import './components/not-found/not-found.css';
 
 import React from 'react';
 import database from "./services/firebase";
@@ -44,8 +42,9 @@ export default class App extends React.Component {
     return (
       this.state.cardArray.filter(item => {
         return (
-          item.title.toLowerCase().includes(value.toLowerCase()) ||
-          item.text.toLowerCase().includes(value.toLowerCase())
+          item.brand.toLowerCase().includes(value.toLowerCase()) ||
+          item.model.toLowerCase().includes(value.toLowerCase()) ||
+          item.color.toLowerCase().includes(value.toLowerCase())
         );
       })
     );
